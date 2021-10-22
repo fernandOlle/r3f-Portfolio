@@ -1,4 +1,4 @@
-# Portifolio project in r3f
+# Portfolio project in r3f
 
 ## to initiate the project run `npm install`
 
