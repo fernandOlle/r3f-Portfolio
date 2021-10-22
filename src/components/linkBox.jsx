@@ -26,18 +26,38 @@ const LinkBox = () => {
   const github = useLoader(THREE.TextureLoader, '/githubF.png');
   const twitter = useLoader(THREE.TextureLoader, '/twitterF.png');
 
+  const redirect = (e) => {
+    switch (Math.floor(e.faceIndex / 2)) {
+      case 0:
+      case 5:
+        window.open('https://twitter.com/JsGists', '_blank');
+        break;
+      case 1:
+      case 3:
+        window.open('https://www.linkedin.com/in/fernandolle/', '_blank');
+        break;
+      case 2:
+      case 4:
+        window.open('https://github.com/fernandOlle', '_blank');
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <a.mesh {...spring} {...bind()} castShadow>
+    <a.mesh
+      {...spring}
+      {...bind()}
+      castShadow
+      onDoubleClick={(e) => {
+        redirect(e);
+      }}
+    >
       <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
       <meshStandardMaterial map={twitter} attachArray='material' />
       <meshStandardMaterial map={linkedin} attachArray='material' />
-      <meshStandardMaterial
-        map={github}
-        attachArray='material'
-        onDoubleClick={() => {
-          window.open('http://github.com', '_blank');
-        }}
-      />
+      <meshStandardMaterial map={github} attachArray='material' />
       <meshStandardMaterial map={linkedin} attachArray='material' />
       <meshStandardMaterial map={github} attachArray='material' />
       <meshStandardMaterial map={twitter} attachArray='material' />
