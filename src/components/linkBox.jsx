@@ -29,15 +29,15 @@ const LinkBox = () => {
   const redirect = (e) => {
     switch (Math.floor(e.faceIndex / 2)) {
       case 0:
-      case 5:
-        window.open('https://twitter.com/JsGists', '_blank');
-        break;
       case 1:
-      case 3:
         window.open('https://www.linkedin.com/in/fernandolle/', '_blank');
         break;
       case 2:
+      case 3:
+        window.open('https://twitter.com/JsGists', '_blank');
+        break;
       case 4:
+      case 5:
         window.open('https://github.com/fernandOlle', '_blank');
         break;
       default:
@@ -55,12 +55,12 @@ const LinkBox = () => {
       }}
     >
       <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
-      <meshStandardMaterial map={twitter} attachArray='material' />
       <meshStandardMaterial map={linkedin} attachArray='material' />
-      <meshStandardMaterial map={github} attachArray='material' />
       <meshStandardMaterial map={linkedin} attachArray='material' />
-      <meshStandardMaterial map={github} attachArray='material' />
       <meshStandardMaterial map={twitter} attachArray='material' />
+      <meshStandardMaterial map={twitter} attachArray='material' />
+      <meshStandardMaterial map={github} attachArray='material' />
+      <meshStandardMaterial map={github} attachArray='material' />
     </a.mesh>
   );
 };
