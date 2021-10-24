@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import Slider from 'react-touch-drag-slider';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -113,6 +114,7 @@ const Carousel = () => {
           threshHold={100}
           transition={0.5}
           scaleOnDrag={true}
+          style={{ zIndex: '-10' }}
         >
           {images.map(({ url, title }, index) => (
             <img src={url} key={index} alt={title} />
