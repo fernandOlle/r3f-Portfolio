@@ -35,7 +35,7 @@ const Overlay = () => {
           textDecoration: 'underline',
         }}
       >
-        — Click the Box
+        — ¿Box?
       </div>
       <div
         style={{

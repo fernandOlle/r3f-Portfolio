@@ -8,7 +8,7 @@ const LinkBox = () => {
   const aspect = size.width / viewport.width;
   const [spring, set] = useSpring(() => ({
     scale: [1, 1, 1],
-    position: [0, 0, 0],
+    position: [-1, 1, 0.5],
     rotation: [0, 0, 0],
     config: { friction: 10 },
   }));
