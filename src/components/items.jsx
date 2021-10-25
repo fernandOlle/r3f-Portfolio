@@ -3,7 +3,7 @@ import { ScrollControls, Scroll } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import Item from './item';
 import { Minimap } from './minimap';
-import { state } from '../utils';
+import { state } from './util';
 
 const Items = ({ w = 0.7, gap = 0.15 }) => {
   const { urls } = useSnapshot(state);

@@ -15,7 +15,7 @@ const LinkBox = () => {
   const bind = useGesture({
     onDrag: ({ offset: [x, y] }) => {
       set({
-        position: [x / aspect, -y / aspect, 1],
+        position: [x / aspect, -y / aspect, 0.5],
         rotation: [y / aspect, x / aspect, 0],
       });
     },

@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useScroll } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
-import { state, damp } from '../utils';
+import { state, damp } from './util';
 
 const material = new THREE.LineBasicMaterial({ color: 'white' });
 const geometry = new THREE.BufferGeometry().setFromPoints([

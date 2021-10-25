@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Image, useScroll } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
-import { state, damp } from '../utils';
+import { state, damp } from './util';
 
 const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
   const ref = useRef();
