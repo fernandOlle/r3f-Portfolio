@@ -13,6 +13,7 @@ const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
   const click = () => (state.clicked = index === clicked ? null : index);
   const over = () => hover(true);
   const out = () => hover(false);
+
   useFrame((state, delta) => {
     const y = scroll.curve(
       index / urls.length - 1.5 / urls.length,

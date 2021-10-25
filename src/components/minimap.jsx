@@ -5,13 +5,13 @@ import { useScroll } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import { state, damp } from './util';
 
-const material = new THREE.LineBasicMaterial({ color: 'white' });
-const geometry = new THREE.BufferGeometry().setFromPoints([
-  new THREE.Vector3(0, -0.5, 0),
-  new THREE.Vector3(0, 0.5, 0),
-]);
-
 export function Minimap() {
+  const material = new THREE.LineBasicMaterial({ color: 'white' });
+  const geometry = new THREE.BufferGeometry().setFromPoints([
+    new THREE.Vector3(0, -0.5, 0),
+    new THREE.Vector3(0, 0.5, 0),
+  ]);
+
   const ref = useRef();
   const scroll = useScroll();
   const { urls } = useSnapshot(state);

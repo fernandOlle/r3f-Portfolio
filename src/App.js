@@ -3,10 +3,16 @@ import { Canvas } from '@react-three/fiber';
 import LinkBox from './components/linkBox';
 import Items from './components/items';
 import './styles.css';
+import { state } from './components/util';
 
 function App() {
   return (
-    <Canvas shadows camera={{ position: [0, 0, 5] }}>
+    <Canvas
+      shadows
+      camera={{ position: [0, 0, 5] }}
+      dpr={[1, 1.5]}
+      onPointerMissed={() => (state.clicked = null)}
+    >
       <ambientLight intensity={0.5} />
       <spotLight
         intensity={0.6}
@@ -22,8 +28,8 @@ function App() {
         <planeBufferGeometry args={[1000, 1000]} />
         <meshPhongMaterial color='#272727' />
       </mesh>
-      <LinkBox />
       <Items />
+      <LinkBox />
     </Canvas>
   );
 }
