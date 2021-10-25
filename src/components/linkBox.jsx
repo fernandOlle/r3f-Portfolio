@@ -12,6 +12,7 @@ const LinkBox = () => {
     rotation: [0, 0, 0],
     config: { friction: 10 },
   }));
+
   const bind = useGesture({
     onDrag: ({ offset: [x, y] }) => {
       set({
@@ -19,8 +20,9 @@ const LinkBox = () => {
         rotation: [y / aspect, x / aspect, 0],
       });
     },
-    onHover: ({ hovering }) =>
-      set({ scale: hovering ? [1.15, 1.15, 1.15] : [1, 1, 1] }),
+    onHover: ({ hovering }) => {
+      set({ scale: hovering ? [1.15, 1.15, 1.15] : [1, 1, 1] });
+    },
   });
 
   const linkedin = useLoader(THREE.TextureLoader, '/linkedin.png');

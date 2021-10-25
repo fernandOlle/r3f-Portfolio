@@ -32,10 +32,12 @@ const Overlay = () => {
           top: 40,
           right: 40,
           fontSize: '13px',
-          textDecoration: 'underline',
+          textAlign: 'right',
         }}
       >
-        — ¿Box?
+        — Brazil; <br />
+        Rio Grande do Sul;
+        <br /> Pelotas.
       </div>
       <div
         style={{

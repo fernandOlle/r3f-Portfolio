@@ -28,4 +28,5 @@ body {
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
+  touch-action: auto;
 }

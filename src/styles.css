@@ -17,6 +17,7 @@ body,
 
 div {
   overflow: hidden !important;
+  touch-action: auto;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   background: #151515;
   color: #a0a0a0;
   font-family: 'Inter var', sans-serif;
+  touch-action: auto;
 }
 
 h1 {
@@ -33,12 +35,14 @@ h1 {
   line-height: 0.7em;
   margin: 0;
   padding: 0;
+  touch-action: auto;
 }
 
 a {
   pointer-events: all;
   color: #a0a0a0;
   text-decoration: none;
+  touch-action: auto;
 }
 
 svg {
