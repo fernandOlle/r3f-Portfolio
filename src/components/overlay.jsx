@@ -24,15 +24,30 @@ const Overlay = () => {
       >
         UFPel
         <br />
-        Federal University of Pelotas
+        {windowWidth && 'Federal University of Pelotas'}
       </a>
       <div
         style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}
       >
         frolle —
         <br />
-        {!windowWidth && 'Prefere a Computer to access this page'}
       </div>
+      {!windowWidth && (
+        <p
+          style={{
+            position: 'absolute',
+            top: 150,
+            left: 40,
+            fontSize: '20px',
+            color: '#83818c',
+            fontWeight: '900',
+          }}
+        >
+          Prefer a Computer <br />
+          to access this page!
+        </p>
+      )}
+
       <div
         style={{
           position: 'absolute',
