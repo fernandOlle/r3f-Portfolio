@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  touch-action: inherit;
+  touch-action: auto;
 }
 
 html,
@@ -12,7 +12,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  touch-action: inherit;
+  touch-action: auto;
 }
 
 div {

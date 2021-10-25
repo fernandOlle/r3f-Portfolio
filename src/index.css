@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  touch-action: inherit;
+  touch-action: auto;
 }
 
 html,
@@ -17,7 +17,7 @@ body,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  touch-action: inherit;
+  touch-action: auto;
 }
 
 body {
