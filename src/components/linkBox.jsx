@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { useLoader, useThree } from '@react-three/fiber';
-import { useGesture } from 'react-use-gesture';
+import { useGesture } from '@use-gesture/react';
 import { useSpring, a } from '@react-spring/three';
 
 const LinkBox = () => {
