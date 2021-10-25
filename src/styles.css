@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  touch-action: auto;
+  touch-action: none;
 }
 
 html,
@@ -12,12 +12,12 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  touch-action: auto;
+  touch-action: none;
 }
 
 div {
   overflow: hidden !important;
-  touch-action: auto;
+  touch-action: none;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   background: #151515;
   color: #a0a0a0;
   font-family: 'Inter var', sans-serif;
-  touch-action: auto;
+  touch-action: none;
 }
 
 h1 {
@@ -35,14 +35,14 @@ h1 {
   line-height: 0.7em;
   margin: 0;
   padding: 0;
-  touch-action: auto;
+  touch-action: none;
 }
 
 a {
   pointer-events: all;
   color: #a0a0a0;
   text-decoration: none;
-  touch-action: auto;
+  touch-action: none;
 }
 
 svg {

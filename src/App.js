@@ -28,7 +28,7 @@ function App() {
         <planeBufferGeometry args={[1000, 1000]} />
         <meshPhongMaterial color='#272727' />
       </mesh>
-      <Items />
+      <Items style={{ touchAction: 'none' }} />
       <LinkBox />
     </Canvas>
   );

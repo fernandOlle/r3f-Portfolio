@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  touch-action: auto;
+  touch-action: none;
 }
 
 html,
@@ -17,7 +17,7 @@ body,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  touch-action: auto;
+  touch-action: none;
 }
 
 body {
@@ -28,5 +28,5 @@ body {
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
-  touch-action: auto;
+  touch-action: none;
 }
