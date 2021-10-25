@@ -1,6 +1,11 @@
+import { useState } from 'react';
+
 import '../styles.css';
 
 const Overlay = () => {
+  const [windowWidth, setWindowWidth] = useState(
+    window.innerWidth <= 900 ? false : true
+  );
   return (
     <div
       style={{
@@ -25,6 +30,8 @@ const Overlay = () => {
         style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}
       >
         frolle —
+        <br />
+        {!windowWidth && 'Prefere a Computer to access this page'}
       </div>
       <div
         style={{
@@ -35,9 +42,7 @@ const Overlay = () => {
           textAlign: 'right',
         }}
       >
-        — Brazil; <br />
-        Rio Grande do Sul;
-        <br /> Pelotas.
+        — ¿A Box?
       </div>
       <div
         style={{

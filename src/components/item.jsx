@@ -5,7 +5,7 @@ import { Image, useScroll } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import { state, damp } from './util';
 
-const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
+function Item({ index, position, scale, c = new THREE.Color(), ...props }) {
   const ref = useRef();
   const scroll = useScroll();
   const { clicked, urls } = useSnapshot(state);
@@ -13,7 +13,6 @@ const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
   const click = () => (state.clicked = index === clicked ? null : index);
   const over = () => hover(true);
   const out = () => hover(false);
-
   useFrame((state, delta) => {
     const y = scroll.curve(
       index / urls.length - 1.5 / urls.length,
@@ -63,6 +62,7 @@ const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
       hovered ? 0.3 : 0.1
     );
   });
+
   return (
     <Image
       ref={ref}
@@ -74,6 +74,6 @@ const Item = ({ index, position, scale, c = new THREE.Color(), ...props }) => {
       onPointerOut={out}
     />
   );
-};
+}
 
 export default Item;

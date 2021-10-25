@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import LinkBox from './components/linkBox';
@@ -6,6 +7,10 @@ import './styles.css';
 import { state } from './components/util';
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(
+    window.innerWidth <= 900 ? false : true
+  );
+
   return (
     <Canvas
       shadows
@@ -28,8 +33,8 @@ function App() {
         <planeBufferGeometry args={[1000, 1000]} />
         <meshPhongMaterial color='#272727' />
       </mesh>
-      <Items style={{ touchAction: 'none' }} />
       <LinkBox />
+      {windowWidth && <Items />}
     </Canvas>
   );
 }
