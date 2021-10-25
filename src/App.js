@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import LinkBox from './components/linkBox';
@@ -7,9 +6,7 @@ import './styles.css';
 import { state } from './components/util';
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(
-    window.innerWidth <= 900 ? false : true
-  );
+  const windowWidth = window.innerWidth <= 900 ? false : true;
 
   return (
     <Canvas

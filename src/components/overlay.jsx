@@ -1,11 +1,7 @@
-import { useState } from 'react';
-
 import '../styles.css';
 
 const Overlay = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    window.innerWidth <= 900 ? false : true
-  );
+  const windowWidth = window.innerWidth <= 900 ? false : true;
   return (
     <div
       style={{
