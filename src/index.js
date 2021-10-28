@@ -1,13 +1,12 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Loader from './components/loader';
 import Overlay from './components/overlay';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={null}>
-      <App />
-    </Suspense>
+    <App />
     <Overlay />
   </React.StrictMode>,
   document.getElementById('root')
