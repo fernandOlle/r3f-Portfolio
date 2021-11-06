@@ -18,29 +18,44 @@ function Item({ index, position, scale, c = new THREE.Color(), ...props }) {
       index / urls.length - 1.5 / urls.length,
       4 / urls.length
     );
+    // change here for height - 7
     ref.current.material.scale[1] = ref.current.scale.y = damp(
       ref.current.scale.y,
-      clicked === index ? 5 : 4 + y,
+      index === 1 || index === 4
+        ? clicked === index
+          ? 7
+          : 4 + y
+        : clicked === index
+        ? 5
+        : 4 + y,
       8,
       delta
     );
+    //change here for wieght - 7
     ref.current.material.scale[0] = ref.current.scale.x = damp(
       ref.current.scale.x,
-      clicked === index ? 4.7 : scale[0],
+      index === 1 || index === 4
+        ? clicked === index
+          ? 4.7
+          : scale[0]
+        : clicked === index
+        ? 7
+        : scale[0],
       6,
       delta
     );
+    //change here for spacing between - 5
     if (clicked !== null && index < clicked)
       ref.current.position.x = damp(
         ref.current.position.x,
-        position[0] - 2,
+        clicked === 1 || clicked === 4 ? position[0] - 2 : position[0] - 3.1,
         6,
         delta
       );
     if (clicked !== null && index > clicked)
       ref.current.position.x = damp(
         ref.current.position.x,
-        position[0] + 2,
+        clicked === 1 || clicked === 4 ? position[0] + 2 : position[0] + 3.1,
         6,
         delta
       );
