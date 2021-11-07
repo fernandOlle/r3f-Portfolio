@@ -14,14 +14,13 @@ const Overlay = () => {
         backgroundColor: 'transparent',
       }}
     >
-      <a
-        href='https://pmnd.rs/'
+      <p
         style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}
       >
         UFPel
         <br />
         {windowWidth && 'Federal University of Pelotas'}
-      </a>
+      </p>
       <div
         style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}
       >
