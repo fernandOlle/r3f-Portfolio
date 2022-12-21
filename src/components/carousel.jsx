@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import Slider from 'react-touch-drag-slider';
-import zIndex from '@material-ui/core/styles/zIndex';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -64,19 +63,19 @@ const Carousel = () => {
 
   const images = [
     {
-      title: 'Nature Image1',
+      title: 'Github',
       url: '/githubF.png',
     },
     {
-      title: 'Nature Image2',
+      title: 'LinkedIn',
       url: '/linkedinF.png',
     },
     {
-      title: 'Nature Image3',
+      title: 'Twitter',
       url: '/twitterF.png',
     },
     {
-      title: 'Nature Image4',
+      title: 'DevDog',
       url: '/devDog.png',
     },
   ];
