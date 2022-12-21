@@ -37,7 +37,7 @@ const LinkBox = () => {
         break;
       case 2:
       case 3:
-        window.open('https://twitter.com/JsGists', '_self');
+        window.open('https://twitter.com/nando_Olle', '_self');
         break;
       case 4:
       case 5:
